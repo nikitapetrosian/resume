@@ -27,7 +27,7 @@ const NavBar = () => {
                 <div className={show} id="navbarNav">
                     <ul className='navbar-nav '>
                         <li className='nav-item active p-2'>
-                            <Link onClick={handleShow} className='text-white nav-link' to='/'> Главная </Link>
+                            <Link onClick={handleShow} className='text-white nav-link' to={mainRoute}> Главная </Link>
                         </li>
                         <li className='nav-item p-2'>
 
