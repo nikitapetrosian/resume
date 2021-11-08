@@ -6,12 +6,13 @@ import Progects from "./pages/progects";
 
 
 function App() {
+  const mainRoute = process.env.NODE_ENV === 'production' ? '/resume' : '/'
   return (
     <div className='container-fluid p-0'>
         <NavBar/>
       <div className='row m-0 flex-nowrap'>        
         <Switch>
-          <Route path='/' exact component={Home}/>
+          <Route path={mainRoute} exact component={Home}/>
           <Route path='/progects' component={Progects}/>
           <Route path='/contacts' component={Contacts}/>
         </Switch>

@@ -6,6 +6,7 @@ import filePDF from '../pages/resumeTime.pdf'
 import { FaTelegram, FaWhatsapp, FaMailBulk } from 'react-icons/fa'
 
 const NavBar = () => {
+    const mainRoute = process.env.NODE_ENV === 'production' ? '/resume' : '/'
     const [show, setShow] = useState("collapse navbar-collapse")
     const handleShow = () => {
         if (show === "collapse navbar-collapse") {
@@ -15,7 +16,7 @@ const NavBar = () => {
     return (
         <>
             <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
-                <Link className='text-white' to='/'>
+                <Link className='text-white' to={mainRoute}>
                     <img className='foto' src={foto} alt="" />
                 </Link>
                 <button
